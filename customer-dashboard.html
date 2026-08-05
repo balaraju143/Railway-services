@@ -1,0 +1,1782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+
+        Railway Customer Dashboard | Stackly
+
+    </title>
+
+    <meta name="description"
+        content="Premium Railway Customer Dashboard">
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+        href="css/dashboard.css">
+
+</head>
+
+<body>
+
+    <!--==========================
+        MOBILE MENU
+    ===========================-->
+<header class="mobile-header">
+
+    <button
+        class="menu-toggle"
+        id="menuToggle">
+
+        <i class="fa-solid fa-bars"></i>
+
+    </button>
+
+    <a
+        href="customer-dashboard.html"
+        class="mobile-logo">
+
+        <img
+            src="images/orange-logo (2).webp"
+            alt="Railway Logo">
+
+    </a>
+
+</header>
+
+    <!--==========================
+        SIDEBAR
+    ===========================-->
+
+    <aside
+        class="sidebar"
+        id="sidebar">
+
+        <div class="sidebar-header">
+
+            <a
+                href="customer-dashboard.html"
+                class="logo">
+
+                <img
+                    src="images/orange-logo (2).webp"
+                    alt="Railway Logo">
+
+            </a>
+
+            <button
+                class="close-sidebar"
+                id="closeSidebar">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+        <!-- Customer -->
+
+        <div class="customer-profile">
+
+            <img
+                src="images/clientimg1.jpg"
+                alt="Customer">
+
+            <h3 class="customer-name">
+
+                Customer Name
+
+            </h3>
+
+            <p class="customer-email">
+
+                customer@gmail.com
+
+            </p>
+
+            <span class="premium-tag">
+
+                Gold Member
+
+            </span>
+
+        </div>
+
+     
+        <!-- Navigation -->
+
+        <nav class="sidebar-menu">
+
+            <a
+                href="#dashboard"
+                class="active">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>
+
+                    Dashboard
+
+                </span>
+
+            </a>
+
+            <a href="#tickets">
+
+                <i class="fa-solid fa-ticket"></i>
+
+                <span>
+
+                    My Tickets
+
+                </span>
+
+            </a>
+
+            <a href="#journeys">
+
+                <i class="fa-solid fa-train"></i>
+
+                <span>
+
+                    Journey History
+
+                </span>
+
+            </a>
+
+            <a href="#railway-updates">
+
+                <i class="fa-solid fa-route"></i>
+
+                <span>
+
+                    Railway Updates
+
+                </span>
+
+            </a>
+
+
+            <a href="#profile">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>
+
+                    My Profile
+
+                </span>
+
+            </a>
+
+            <a href="login.html">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>
+
+                    Logout
+
+                </span>
+
+            </a>
+
+        </nav>
+
+
+    </aside>
+
+    <!-- Overlay -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay">
+
+    </div>
+
+    <!--==========================
+        MAIN
+    ===========================-->
+
+    <main class="dashboard-main">
+
+        <!-- Header -->
+
+        <header class="dashboard-header">
+
+            <div class="header-left">
+
+                <h1>
+
+                    Railway Customer Dashboard
+
+                </h1>
+
+                <p>
+
+                    Welcome Back,
+
+                    <span class="customer-email">
+
+                        customer@gmail.com
+
+                    </span>
+
+                </p>
+
+                <span
+                    class="today-date"
+                    id="currentDate">
+
+                    Tuesday, August 04, 2026
+
+                </span>
+
+            </div>
+
+            <div class="header-right">
+
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        placeholder="Search trains, routes...">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </div>
+
+                <div class="header-icons">
+
+                    <a
+                        href="404.html"
+                        class="notification">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span>
+
+                            4
+
+                        </span>
+
+                    </a>
+
+                    <a
+                        href="404.html"
+                        class="notification">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        <span>
+
+                            2
+
+                        </span>
+
+                    </a>
+
+                </div>
+
+                <div class="profile-image">
+
+                    <img
+                        src="images/clientimg1.jpg"
+                        alt="Customer">
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!--==========================
+            DASHBOARD
+        ===========================-->
+
+        <section
+            id="dashboard"
+            class="page-section active">
+
+
+<!--==========================================
+        RAILWAY HERO
+===========================================-->
+
+<section class="railway-hero">
+
+    <div class="hero-left">
+
+        <span class="hero-badge">
+
+            <i class="fa-solid fa-train"></i>
+
+            Smart Railway Experience
+
+        </span>
+
+        <h1>
+
+            Your Journey,
+            Connected With
+            Smart Railway Technology
+
+        </h1>
+
+        <p>
+
+            Manage bookings, monitor live train
+            status, explore premium services and
+            receive instant railway notifications
+            from one secure customer dashboard.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="404.html"
+                class="primary-btn">
+
+                Book Ticket
+
+            </a>
+
+            <a href="404.html"
+                class="secondary-btn">
+
+                Explore Routes
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-right">
+
+        <img
+            src="images/train-hero.webp"
+            alt="Railway">
+
+    </div>
+
+</section>
+
+<!--==========================================
+        QUICK STATS
+===========================================-->
+
+<section class="dashboard-stats">
+
+    <div class="stat-card">
+
+        <div class="stat-icon">
+
+            <i class="fa-solid fa-ticket"></i>
+
+        </div>
+
+        <div class="stat-content">
+
+            <h3>
+
+                16
+
+            </h3>
+
+            <p>
+
+                Active Tickets
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="stat-card">
+
+        <div class="stat-icon">
+
+            <i class="fa-solid fa-route"></i>
+
+        </div>
+
+        <div class="stat-content">
+
+            <h3>
+
+                82
+
+            </h3>
+
+            <p>
+
+                Journeys Completed
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="stat-card">
+
+        <div class="stat-icon">
+
+            <i class="fa-solid fa-clock"></i>
+
+        </div>
+
+        <div class="stat-content">
+
+            <h3>
+
+                7
+
+            </h3>
+
+            <p>
+
+                Upcoming Trips
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="stat-card">
+
+        <div class="stat-icon">
+
+            <i class="fa-solid fa-award"></i>
+
+        </div>
+
+        <div class="stat-content">
+
+            <h3>
+
+                Gold
+
+            </h3>
+
+            <p>
+
+                Loyalty Tier
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================
+        LIVE STATUS
+===========================================-->
+
+<section class="live-status-grid">
+
+    <div class="status-card large">
+
+        <div class="section-title">
+
+            <h2>
+
+                Live Train Status
+
+            </h2>
+
+            <a href="404.html">
+
+                View All
+
+            </a>
+
+        </div>
+
+        <div class="train-list">
+
+            <div class="train-item">
+
+                <div>
+
+                    <h3>
+
+                    Vande Bharat Express
+
+                    </h3>
+
+                    <p>
+
+                        Hyderabad → Vizag
+
+                    </p>
+
+                </div>
+
+                <span class="running">
+
+                    Running On Time
+
+                </span>
+
+            </div>
+
+            <div class="train-item">
+
+                <div>
+
+                    <h3>
+
+                        Rajdhani Express
+
+                    </h3>
+
+                    <p>
+
+                        Delhi → Mumbai
+
+                    </p>
+
+                </div>
+
+                <span class="delay">
+
+                    15 Min Delay
+
+                </span>
+
+            </div>
+
+            <div class="train-item">
+
+                <div>
+
+                    <h3>
+
+                        Shatabdi Express
+
+                    </h3>
+
+                    <p>
+
+                        Chennai → Mysuru
+
+                    </p>
+
+                </div>
+
+                <span class="running">
+
+                    On Schedule
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="status-card">
+
+        <h2>
+
+            Next Journey
+
+        </h2>
+
+        <img
+            src="images/ticket.webp"
+            alt="Ticket">
+
+        <h3>
+
+            Hyderabad → Visakhapatnam
+
+        </h3>
+
+        <p>
+
+            Departure
+
+        </p>
+
+        <strong>
+
+            08 Aug 2026 · 06:45 AM
+
+        </strong>
+
+        <a href="404.html"
+            class="primary-btn">
+
+            View Ticket
+
+        </a>
+
+    </div>
+
+</section>
+
+<!--==========================================
+        QUICK ACTIONS
+===========================================-->
+
+<section class="quick-actions">
+
+    <div class="action-card">
+
+        <i class="fa-solid fa-ticket"></i>
+
+        <h3>
+
+            Book Ticket
+
+        </h3>
+
+    </div>
+
+    <div class="action-card">
+
+        <i class="fa-solid fa-location-dot"></i>
+
+        <h3>
+
+            Live Tracking
+
+        </h3>
+
+    </div>
+
+    <div class="action-card">
+
+        <i class="fa-solid fa-wallet"></i>
+
+        <h3>
+
+            Refund Status
+
+        </h3>
+
+    </div>
+
+    <div class="action-card">
+
+        <i class="fa-solid fa-headset"></i>
+
+        <h3>
+
+            Customer Support
+
+        </h3>
+
+    </div>
+
+</section>
+  </section>
+
+  <!--==========================================
+        MY TICKETS
+===========================================-->
+
+<section id="tickets" class="page-section">
+
+    <div class="section-heading">
+
+        <h2>
+
+            My Railway Tickets
+
+        </h2>
+
+        <p>
+
+            View your upcoming journeys, completed
+            bookings and ticket information in one place.
+
+        </p>
+
+    </div>
+
+    <div class="ticket-grid">
+
+        <!-- Ticket 01 -->
+
+        <div class="ticket-card">
+
+            <div class="ticket-top">
+
+                <span class="ticket-status confirmed">
+
+                    Confirmed
+
+                </span>
+
+                <span class="ticket-id">
+
+                    #RB24018
+
+                </span>
+
+            </div>
+
+            <div class="ticket-route">
+
+                <div>
+
+                    <h3>
+
+                        Hyderabad
+
+                    </h3>
+
+                    <span>
+
+                        06:45 AM
+
+                    </span>
+
+                </div>
+
+                <div class="route-line">
+
+                    <i class="fa-solid fa-train"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>
+
+                        Vizag
+
+                    </h3>
+
+                    <span>
+
+                        02:20 PM
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="ticket-details">
+
+                <div>
+
+                    <small>
+
+                        Train
+
+                    </small>
+
+                    <strong>
+
+                         Bharat
+
+                    </strong>
+
+                </div>
+
+                <div>
+
+                    <small>
+
+                        Coach
+
+                    </small>
+
+                    <strong>
+
+                        C2
+
+                    </strong>
+
+                </div>
+
+                <div>
+
+                    <small>
+
+                        Seat
+
+                    </small>
+
+                    <strong>
+
+                        28
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+            <div class="ticket-buttons">
+
+                <a href="404.html"
+                    class="primary-btn">
+
+                    View Ticket
+
+                </a>
+
+                <a href="404.html"
+                    class="secondary-btn">
+
+                    Download PDF
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Ticket 02 -->
+
+        <div class="ticket-card">
+
+            <div class="ticket-top">
+
+                <span class="ticket-status waiting">
+
+                    Waiting
+
+                </span>
+
+                <span class="ticket-id">
+
+                    #RB24019
+
+                </span>
+
+            </div>
+
+            <div class="ticket-route">
+
+                <div>
+
+                    <h3>
+
+                        Chennai
+
+                    </h3>
+
+                    <span>
+
+                        09:15 AM
+
+                    </span>
+
+                </div>
+
+                <div class="route-line">
+
+                    <i class="fa-solid fa-train"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>
+
+                        Mysuru
+
+                    </h3>
+
+                    <span>
+
+                        04:10 PM
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="ticket-details">
+
+                <div>
+
+                    <small>
+
+                        Train
+
+                    </small>
+
+                    <strong>
+
+                        Shatabdi
+
+                    </strong>
+
+                </div>
+
+                <div>
+
+                    <small>
+
+                        Coach
+
+                    </small>
+
+                    <strong>
+
+                        B1
+
+                    </strong>
+
+                </div>
+
+                <div>
+
+                    <small>
+
+                        Seat
+
+                    </small>
+
+                    <strong>
+
+                        WL-12
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+            <div class="ticket-buttons">
+
+                <a href="404.html"
+                    class="primary-btn">
+
+                    Check Status
+
+                </a>
+
+                <a href="404.html"
+                    class="secondary-btn">
+
+                    Cancel
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Ticket 03 -->
+
+        <div class="ticket-card">
+
+            <div class="ticket-top">
+
+                <span class="ticket-status completed">
+
+                    Completed
+
+                </span>
+
+                <span class="ticket-id">
+
+                    #RB24020
+
+                </span>
+
+            </div>
+
+            <div class="ticket-route">
+
+                <div>
+
+                    <h3>
+
+                        Mumbai
+
+                    </h3>
+
+                    <span>
+
+                        07:00 AM
+
+                    </span>
+
+                </div>
+
+                <div class="route-line">
+
+                    <i class="fa-solid fa-train"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>
+
+                        Delhi
+
+                    </h3>
+
+                    <span>
+
+                        08:45 PM
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="ticket-details">
+
+                <div>
+
+                    <small>
+
+                        Train
+
+                    </small>
+
+                    <strong>
+
+                        Rajdhani
+
+                    </strong>
+
+                </div>
+
+                <div>
+
+                    <small>
+
+                        Coach
+
+                    </small>
+
+                    <strong>
+
+                        A1
+
+                    </strong>
+
+                </div>
+
+                <div>
+
+                    <small>
+
+                        Seat
+
+                    </small>
+
+                    <strong>
+
+                        18
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+            <div class="ticket-buttons">
+
+                <a href="404.html"
+                    class="primary-btn">
+
+                    Journey Details
+
+                </a>
+
+                <a href="404.html"
+                    class="secondary-btn">
+
+                    Invoice
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!--==========================================
+        JOURNEY HISTORY
+===========================================-->
+
+<section id="journeys" class="page-section">
+
+    <div class="section-heading">
+
+        <h2>
+
+            Journey History
+
+        </h2>
+
+        <p>
+
+            View your completed railway journeys and
+            travel achievements.
+
+        </p>
+
+    </div>
+
+    <div class="journey-wrapper">
+
+        <div class="journey-timeline">
+
+            <!-- Journey -->
+
+            <div class="journey-item">
+
+                <div class="journey-icon">
+
+                    <i class="fa-solid fa-train"></i>
+
+                </div>
+
+                <div class="journey-content">
+
+                    <div class="journey-top">
+
+                        <h3>
+
+                            Vande Bharat Express
+
+                        </h3>
+
+                        <span>
+
+                            08 Aug 2026
+
+                        </span>
+
+                    </div>
+
+                    <p>
+
+                        Hyderabad →
+                        Bengaluru
+
+                    </p>
+
+                    <div class="journey-info">
+
+                        <span>
+
+                            Coach C2
+
+                        </span>
+
+                        <span>
+
+                            Seat 28
+
+                        </span>
+
+                        <span class="completed">
+
+                            Completed
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Journey -->
+
+            <div class="journey-item">
+
+                <div class="journey-icon">
+
+                    <i class="fa-solid fa-train"></i>
+
+                </div>
+
+                <div class="journey-content">
+
+                    <div class="journey-top">
+
+                        <h3>
+
+                            Rajdhani Express
+
+                        </h3>
+
+                        <span>
+
+                            20 Jul 2026
+
+                        </span>
+
+                    </div>
+
+                    <p>
+
+                        Delhi →
+                        Mumbai
+
+                    </p>
+
+                    <div class="journey-info">
+
+                        <span>
+
+                            Coach A1
+
+                        </span>
+
+                        <span>
+
+                            Seat 18
+
+                        </span>
+
+                        <span class="completed">
+
+                            Completed
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Journey -->
+
+            <div class="journey-item">
+
+                <div class="journey-icon">
+
+                    <i class="fa-solid fa-train"></i>
+
+                </div>
+
+                <div class="journey-content">
+
+                    <div class="journey-top">
+
+                        <h3>
+
+                            Shatabdi Express
+
+                        </h3>
+
+                        <span>
+
+                            14 Jul 2026
+
+                        </span>
+
+                    </div>
+
+                    <p>
+
+                        Chennai →
+                        Mysuru
+
+                    </p>
+
+                    <div class="journey-info">
+
+                        <span>
+
+                            Coach B2
+
+                        </span>
+
+                        <span>
+
+                            Seat 09
+
+                        </span>
+
+                        <span class="completed">
+
+                            Completed
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Right Side -->
+
+        <div class="journey-summary">
+
+            <h3>
+
+                Travel Summary
+
+            </h3>
+
+            <div class="summary-card">
+
+                <i class="fa-solid fa-route"></i>
+
+                <h2>
+
+                    82
+
+                </h2>
+
+                <p>
+
+                    Total Journeys
+
+                </p>
+
+            </div>
+
+            <div class="summary-card">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <h2>
+
+                    25
+
+                </h2>
+
+                <p>
+
+                    Cities Visited
+
+                </p>
+
+            </div>
+
+            <div class="summary-card">
+
+                <i class="fa-solid fa-award"></i>
+
+                <h2>
+
+                    Gold
+
+                </h2>
+
+                <p>
+
+                    Loyalty Level
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================
+RAILWAY UPDATES
+===========================================-->
+
+<section id="railway-updates" class="page-section">
+
+    <div class="section-heading">
+
+        <h2>Railway Updates</h2>
+
+        <p>Latest announcements and travel information.</p>
+
+    </div>
+
+    <div class="updates-grid">
+
+        <div class="update-card">
+
+            <i class="fa-solid fa-bullhorn"></i>
+
+            <h3>New Train Added</h3>
+
+            <p>
+                Vande Bharat Express now operates between Hyderabad and Pune.
+            </p>
+
+            <span>02 Aug 2026</span>
+
+        </div>
+
+        <div class="update-card">
+
+            <i class="fa-solid fa-clock"></i>
+
+            <h3>Schedule Update</h3>
+
+            <p>
+                Rajdhani Express departure changed to 7:15 PM from Delhi.
+            </p>
+
+            <span>04 Aug 2026</span>
+
+        </div>
+
+        <div class="update-card">
+
+            <i class="fa-solid fa-triangle-exclamation"></i>
+
+            <h3>Travel Advisory</h3>
+
+            <p>
+                Passengers should arrive at the station 30 minutes early.
+            </p>
+
+            <span>Today</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--==========================================
+        PASSENGER PROFILE
+===========================================-->
+
+<section id="profile" class="page-section">
+
+    <div class="section-heading">
+
+        <h2>
+
+            My Profile
+
+        </h2>
+
+        <p>
+
+            Manage your account, travel preferences
+            and membership information.
+
+        </p>
+
+    </div>
+
+    <div class="profile-wrapper">
+
+        <!-- Left -->
+
+        <div class="profile-card">
+
+            <div class="profile-image">
+
+                <img
+                    src="images/clientimg1.jpg"
+                    alt="Customer">
+
+            </div>
+
+            <h3 class="customer-name">
+
+                Customer Name
+
+            </h3>
+
+            <p class="customer-email">
+
+                customer@gmail.com
+
+            </p>
+
+            <span class="member-badge">
+
+                Gold Railway Member
+
+            </span>
+
+            <div class="profile-stats">
+
+                <div>
+
+                    <h3>
+
+                        82
+
+                    </h3>
+
+                    <span>
+
+                        Trips
+
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <h3>
+
+                        25
+
+                    </h3>
+
+                    <span>
+
+                        Cities
+
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <h3>
+
+                        4.9★
+
+                    </h3>
+
+                    <span>
+
+                        Rating
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Right -->
+
+        <div class="profile-details">
+
+            <div class="detail-card">
+
+                <h3>
+
+                    Personal Information
+
+                </h3>
+
+                <div class="detail-grid">
+
+                    <div>
+
+                        <strong>
+
+                            Full Name
+
+                        </strong>
+
+                        <span class="customer-name">
+
+                            Customer Name
+
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+
+                            Email
+
+                        </strong>
+
+                        <span class="customer-email">
+
+                            customer@gmail.com
+
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+
+                            Mobile
+
+                        </strong>
+
+                        <span>
+
+                            +91 9876543210
+
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+
+                            Member Since
+
+                        </strong>
+
+                        <span>
+
+                            January 2025
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="detail-card">
+
+                <h3>
+
+                    Favourite Routes
+
+                </h3>
+
+                <ul class="route-tags">
+
+                    <li>
+
+                        Hyderabad → Bengaluru
+
+                    </li>
+
+                    <li>
+
+                        Chennai → Mysuru
+
+                    </li>
+
+                    <li>
+
+                        Delhi → Mumbai
+
+                    </li>
+
+                    <li>
+
+                        Vijayawada → Vizag
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="detail-card">
+
+                <h3>
+
+                    Quick Actions
+
+                </h3>
+
+                <div class="action-buttons">
+
+                    <a href="404.html"
+                        class="primary-btn">
+
+                        Edit Profile
+
+                    </a>
+
+                    <a href="404.html"
+                        class="secondary-btn">
+
+                        Change Password
+
+                    </a>
+
+                    <a href="404.html"
+                        class="primary-btn">
+
+                        Download Ticket
+
+                    </a>
+
+                    <a href="login.html"
+                        class="secondary-btn">
+
+                        Logout
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================
+        FOOTER
+===========================================-->
+
+<footer class="dashboard-footer">
+
+    <p>
+
+        © 2026 Stackly Railway Management.
+        All Rights Reserved.
+
+    </p>
+
+</footer>
+
+</main>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

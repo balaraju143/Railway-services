@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Railway Login | Stackly</title>
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet"
+        href="css/style.css">
+
+    <link rel="stylesheet"
+        href="css/auth.css">
+
+</head>
+
+<body>
+
+<section class="login-section">
+
+    <!--==============================
+    LEFT IMAGE
+    ==============================-->
+
+    <div class="login-image">
+
+        <img src="images/samrt-infrastructure.webp"
+            alt="Railway Technology">
+
+        <div class="image-overlay"></div>
+
+        <div class="image-content">
+
+            <span class="section-tag">
+
+                Secure Railway Platform
+
+            </span>
+
+            <h1>
+
+                Connecting Smart
+                Railway Operations
+
+            </h1>
+
+            <p>
+
+                Access your secure dashboard to manage railway
+                infrastructure, AI monitoring and intelligent
+                transportation services.
+
+            </p>
+
+            <div class="floating-card">
+
+                <div class="float-icon">
+
+                    <i class="fa-solid fa-train-subway"></i>
+
+                </div>
+
+                <div>
+
+                    <h4>
+
+                        Railway Control Center
+
+                    </h4>
+
+                    <p>
+
+                        AI Monitoring • Live Operations
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--==============================
+    LOGIN CARD
+    ==============================-->
+
+    <div class="login-wrapper">
+
+        <div class="login-card">
+
+            <a href="index.html"
+
+                class="back-home">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back To Home
+
+            </a>
+
+            <div class="login-tabs">
+
+                <button
+                    type="button"
+                    class="tab-btn active">
+
+                    Client Login
+
+                </button>
+
+                <button
+                    type="button"
+                    class="tab-btn">
+
+                    Admin Login
+
+                </button>
+
+            </div>
+
+            <span class="section-tag">
+
+                Secure Login
+
+            </span>
+
+            <h2>
+
+                Welcome Back
+
+            </h2>
+
+            <p>
+
+                Login to continue.
+
+            </p>
+
+            <div class="role-selection">
+
+                <div class="role-card active"
+
+                    data-role="customer">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <span>
+
+                        Customer
+
+                    </span>
+
+                </div>
+
+                <div class="role-card"
+
+                    data-role="admin">
+
+                    <i class="fa-solid fa-user-shield"></i>
+
+                    <span>
+
+                        Admin
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <form id="loginForm">
+                                <!--==================================
+                NAME
+                ==================================-->
+
+                <div class="input-group">
+
+                    <label>
+
+                        Full Name
+
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your full name"
+                            autocomplete="off">
+
+                    </div>
+
+                    <small></small>
+
+                </div>
+
+                <!--==================================
+                EMAIL
+                ==================================-->
+
+                <div class="input-group">
+
+                    <label>
+
+                        Email Address
+
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email"
+                            autocomplete="off">
+
+                    </div>
+
+                    <small></small>
+
+                </div>
+
+                <!--==================================
+                PASSWORD
+                ==================================-->
+
+                <div class="input-group">
+
+                    <label>
+
+                        Password
+
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter your password">
+
+                        <span class="toggle-password">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </span>
+
+                    </div>
+
+                    <small></small>
+
+                </div>
+
+                <!--==================================
+                OPTIONS
+                ==================================-->
+
+                <div class="form-options">
+
+                    <label class="remember">
+
+                        <input
+                            type="checkbox"
+                            id="remember">
+
+                        Remember Me
+
+                    </label>
+
+                    <a href="404.html">
+
+                        Forgot Password?
+
+                    </a>
+
+                </div>
+
+                <!--==================================
+                BUTTON
+                ==================================-->
+
+                <button
+                    type="submit"
+                    class="primary-btn">
+
+                    Login To Dashboard
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </form>
+
+            <!--==================================
+            DIVIDER
+            ==================================-->
+
+            <div class="login-divider">
+
+                <span>
+
+                    Secure Railway Access
+
+                </span>
+
+            </div>
+
+            <!--==================================
+            SIGNUP
+            ==================================-->
+
+            <p class="signup-text">
+
+                Don't have an account?
+
+                <a href="signup.html">
+
+                    Create Account
+
+                </a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="js/script.js"></script>
+
+<script src="js/login.js"></script>
+
+</body>
+
+</html>

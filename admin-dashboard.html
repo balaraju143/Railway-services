@@ -1,0 +1,1703 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+
+        Railway Admin Dashboard | Stackly
+
+    </title>
+
+    <meta name="description"
+        content="Premium Railway Customer Dashboard">
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+        href="css/dashboard.css">
+
+</head>
+
+<body>
+
+    <!--==========================
+        MOBILE MENU
+    ===========================-->
+<header class="mobile-header">
+
+    <button
+        class="menu-toggle"
+        id="menuToggle">
+
+        <i class="fa-solid fa-bars"></i>
+
+    </button>
+
+    <a
+        href="customer-dashboard.html"
+        class="mobile-logo">
+
+        <img
+            src="images/orange-logo (2).webp"
+            alt="Railway Logo">
+
+    </a>
+
+</header>
+
+    <!--==========================
+        SIDEBAR
+    ===========================-->
+
+    <aside
+        class="sidebar"
+        id="sidebar">
+
+        <div class="sidebar-header">
+
+            <a
+                href="customer-dashboard.html"
+                class="logo">
+
+                <img
+                    src="images/orange-logo (2).webp"
+                    alt="Railway Logo">
+
+            </a>
+
+            <button
+                class="close-sidebar"
+                id="closeSidebar">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+        <!-- Customer -->
+
+        <div class="customer-profile">
+
+            <img
+                src="images/client4.webp"
+                alt="Customer">
+
+            <h3 class="customer-name">
+
+                Customer Name
+
+            </h3>
+
+            <p class="customer-email">
+
+                customer@gmail.com
+
+            </p>
+
+            <span class="premium-tag">
+
+                Gold Member
+
+            </span>
+
+        </div>
+
+    
+       <!-- Navigation -->
+<nav class="sidebar-menu">
+
+    <a href="#dashboard" class="active">
+
+        <i class="fa-solid fa-chart-line"></i>
+
+        <span>
+
+            Dashboard
+
+        </span>
+
+    </a>
+
+    <a href="#train-management">
+
+        <i class="fa-solid fa-train"></i>
+
+        <span>
+
+            Train Management
+
+        </span>
+
+    </a>
+
+    <a href="#bookings">
+
+        <i class="fa-solid fa-ticket"></i>
+
+        <span>
+
+            Booking Management
+
+        </span>
+
+    </a>
+
+    <a href="#passenger-management">
+
+        <i class="fa-solid fa-users"></i>
+
+        <span>
+
+            Passenger Management
+
+        </span>
+
+    </a>
+
+    <a href="#schedule-management">
+
+        <i class="fa-solid fa-calendar-days"></i>
+
+        <span>
+
+            Train Schedule
+
+        </span>
+
+    </a>
+
+    <a href="#reports">
+
+        <i class="fa-solid fa-chart-pie"></i>
+
+        <span>
+
+            Reports & Analytics
+
+        </span>
+
+    </a>
+
+
+    <a href="login.html">
+
+        <i class="fa-solid fa-right-from-bracket"></i>
+
+        <span>
+
+            Logout
+
+        </span>
+
+    </a>
+
+</nav>
+
+
+
+    </aside>
+
+    <!-- Overlay -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay">
+
+    </div>
+
+    <!--==========================
+        MAIN
+    ===========================-->
+
+    <main class="dashboard-main">
+
+        <!-- Header -->
+
+        <header class="dashboard-header">
+
+            <div class="header-left">
+
+                <h1>
+
+                    Railway Admin Dashboard
+
+                </h1>
+
+                <p>
+
+                    Welcome Back,
+
+                    <span class="customer-email">
+
+                        customer@gmail.com
+
+                    </span>
+
+                </p>
+
+                <span
+                    class="today-date"
+                    id="currentDate">
+
+                    Tuesday, August 04, 2026
+
+                </span>
+
+            </div>
+
+            <div class="header-right">
+
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        placeholder="Search trains, routes...">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </div>
+
+                <div class="header-icons">
+
+                    <a
+                        href="404.html"
+                        class="notification">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span>
+
+                            4
+
+                        </span>
+
+                    </a>
+
+                    <a
+                        href="404.html"
+                        class="notification">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        <span>
+
+                            2
+
+                        </span>
+
+                    </a>
+
+                </div>
+
+                <div class="profile-image">
+
+                    <img
+                        src="images/client4.webp"
+                        alt="Customer">
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!--==========================
+            DASHBOARD
+        ===========================-->
+
+        <section
+            id="dashboard2"
+            class="page-section active">
+        </section>
+
+
+<!--==========================================
+        DASHBOARD
+===========================================-->
+
+<section
+    id="dashboard"
+    class="page-section">
+
+    <!-- Dashboard Header -->
+
+    <div class="section-heading">
+
+        <h2>
+
+            Railway Administration Dashboard
+
+        </h2>
+
+        <p>
+
+            Monitor railway operations, bookings, passengers, revenue and train performance from one centralized dashboard.
+
+        </p>
+
+    </div>
+
+    <!-- Statistics -->
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+
+                <i class="fa-solid fa-train"></i>
+
+            </div>
+
+            <div class="stat-content">
+
+                <h3>
+
+                    128
+
+                </h3>
+
+                <p>
+
+                    Active Trains
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+
+                <i class="fa-solid fa-ticket"></i>
+
+            </div>
+
+            <div class="stat-content">
+
+                <h3>
+
+                    18,426
+
+                </h3>
+
+                <p>
+
+                    Today's Bookings
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+
+                <i class="fa-solid fa-users"></i>
+
+            </div>
+
+            <div class="stat-content">
+
+                <h3>
+
+                    9,842
+
+                </h3>
+
+                <p>
+
+                    Active Passengers
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+
+            </div>
+
+            <div class="stat-content">
+
+                <h3>
+
+                    ₹24.8L
+
+                </h3>
+
+                <p>
+
+                    Daily Revenue
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Quick Actions -->
+
+    <div class="quick-actions">
+
+        <div class="action-card">
+
+            <i class="fa-solid fa-plus"></i>
+
+            <h3>
+
+                Add Train
+
+            </h3>
+
+        </div>
+
+        <div class="action-card">
+
+            <i class="fa-solid fa-calendar-days"></i>
+
+            <h3>
+
+                Update Schedule
+
+            </h3>
+
+        </div>
+
+        <div class="action-card">
+
+            <i class="fa-solid fa-user-plus"></i>
+
+            <h3>
+
+                Add Passenger
+
+            </h3>
+
+        </div>
+
+        <div class="action-card">
+
+            <i class="fa-solid fa-chart-column"></i>
+
+            <h3>
+
+                View Reports
+
+            </h3>
+
+        </div>
+
+    </div>
+
+    <!-- Dashboard Overview -->
+
+    <div class="dashboard-overview">
+
+        <div class="overview-card">
+
+            <h3>
+
+                Today's Operations
+
+            </h3>
+
+            <ul>
+
+                <li>✔ 128 Trains Running</li>
+
+                <li>✔ 4 Delayed Trains</li>
+
+                <li>✔ 18,426 Tickets Booked</li>
+
+                <li>✔ 2 Maintenance Alerts</li>
+
+            </ul>
+
+        </div>
+
+        <div class="overview-card">
+
+            <h3>
+
+                Revenue Summary
+
+            </h3>
+
+            <ul>
+
+                <li>Today's Revenue : ₹24.8 Lakhs</li>
+
+                <li>This Week : ₹1.74 Crore</li>
+
+                <li>This Month : ₹7.83 Crore</li>
+
+                <li>Refunds : ₹2.4 Lakhs</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+        
+<!--==========================================
+TRAIN MANAGEMENT
+===========================================-->
+
+<section
+    id="train-management"
+    class="page-section">
+
+    <div class="section-heading">
+
+        <h2>
+
+            Train Management
+
+        </h2>
+
+        <p>
+
+            Manage train schedules, routes and operational status.
+
+        </p>
+
+    </div>
+
+    <div class="train-grid">
+
+        <!-- Train -->
+
+        <div class="train-card">
+
+            <div class="train-top">
+
+                <div>
+
+                    <h3>
+
+                        Vande Bharat Express
+
+                    </h3>
+
+                    <span>
+
+                        Train No : 20701
+
+                    </span>
+
+                </div>
+
+                <span class="status active">
+
+                    Active
+
+                </span>
+
+            </div>
+
+            <div class="train-route">
+
+                <div>
+
+                    <strong>
+
+                        Hyderabad
+
+                    </strong>
+
+                    <small>
+
+                        06:00 AM
+
+                    </small>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-right-long"></i>
+
+                <div>
+
+                    <strong>
+
+                        Bengaluru
+
+                    </strong>
+
+                    <small>
+
+                        01:45 PM
+
+                    </small>
+
+                </div>
+
+            </div>
+
+            <div class="train-info">
+
+                <div>
+
+                    <small>
+
+                        Coaches
+
+                    </small>
+
+                    <strong>
+
+                        18
+
+                    </strong>
+
+                </div>
+
+                <div>
+
+                    <small>
+
+                        Seats
+
+                    </small>
+
+                    <strong>
+
+                        1280
+
+                    </strong>
+
+                </div>
+
+                <div>
+
+                    <small>
+
+                        Platform
+
+                    </small>
+
+                    <strong>
+
+                        5
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+            <div class="train-buttons">
+
+                <a href="404.html" class="primary-btn">
+
+                    Edit
+
+                </a>
+
+                <a href="404.html" class="secondary-btn">
+
+                    View
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Train -->
+
+        <div class="train-card">
+
+            <div class="train-top">
+
+                <div>
+
+                    <h3>
+
+                        Rajdhani Express
+
+                    </h3>
+
+                    <span>
+
+                        Train No : 12952
+
+                    </span>
+
+                </div>
+
+                <span class="status delay">
+
+                    Delayed
+
+                </span>
+
+            </div>
+
+            <div class="train-route">
+
+                <div>
+
+                    <strong>
+
+                        Delhi
+
+                    </strong>
+
+                    <small>
+
+                        07:15 PM
+
+                    </small>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-right-long"></i>
+
+                <div>
+
+                    <strong>
+
+                        Mumbai
+
+                    </strong>
+
+                    <small>
+
+                        10:10 AM
+
+                    </small>
+
+                </div>
+
+            </div>
+
+            <div class="train-info">
+
+                <div>
+
+                    <small>
+
+                        Coaches
+
+                    </small>
+
+                    <strong>
+
+                        22
+
+                    </strong>
+
+                </div>
+
+                <div>
+
+                    <small>
+
+                        Seats
+
+                    </small>
+
+                    <strong>
+
+                        1520
+
+                    </strong>
+
+                </div>
+
+                <div>
+
+                    <small>
+
+                        Platform
+
+                    </small>
+
+                    <strong>
+
+                        2
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+            <div class="train-buttons">
+
+                <a href="404.html" class="primary-btn">
+
+                    Edit
+
+                </a>
+
+                <a href="404.html" class="secondary-btn">
+
+                    View
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================
+BOOKING MANAGEMENT
+===========================================-->
+
+<section id="bookings" class="page-section">
+
+    <div class="section-heading">
+
+        <h2>Booking Management</h2>
+
+        <p>
+            View, approve and manage all railway ticket bookings.
+        </p>
+
+    </div>
+
+    <div class="booking-grid">
+
+        <!-- Booking -->
+
+        <div class="booking-card">
+
+            <div class="booking-top">
+
+                <div>
+
+                    <h3>BK102548</h3>
+
+                    <span>Booking ID</span>
+
+                </div>
+
+                <span class="booking-status confirmed">
+
+                    Confirmed
+
+                </span>
+
+            </div>
+
+            <div class="booking-user">
+
+                <img src="images/clientimg1.jpg" alt="Passenger">
+
+                <div>
+
+                    <h4>Rahul Sharma</h4>
+
+                    <p>Hyderabad → Bengaluru</p>
+
+                </div>
+
+            </div>
+
+            <div class="booking-info">
+
+                <div>
+
+                    <small>Train</small>
+
+                    <strong>Vande Bharat</strong>
+
+                </div>
+
+                <div>
+
+                    <small>Seat</small>
+
+                    <strong>B2 - 34</strong>
+
+                </div>
+
+                <div>
+
+                    <small>Fare</small>
+
+                    <strong>₹1,250</strong>
+
+                </div>
+
+            </div>
+
+            <div class="booking-buttons">
+
+                <a href="404.html" class="primary-btn">
+
+                    View
+
+                </a>
+
+                <a href="404.html" class="secondary-btn">
+
+                    Cancel
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Booking -->
+
+        <div class="booking-card">
+
+            <div class="booking-top">
+
+                <div>
+
+                    <h3>BK102549</h3>
+
+                    <span>Booking ID</span>
+
+                </div>
+
+                <span class="booking-status pending">
+
+                    Pending
+
+                </span>
+
+            </div>
+
+            <div class="booking-user">
+
+                <img src="images/img13.webp" alt="Passenger">
+
+                <div>
+
+                    <h4>Priya Reddy</h4>
+
+                    <p>Delhi → Mumbai</p>
+
+                </div>
+
+            </div>
+
+            <div class="booking-info">
+
+                <div>
+
+                    <small>Train</small>
+
+                    <strong>Rajdhani</strong>
+
+                </div>
+
+                <div>
+
+                    <small>Seat</small>
+
+                    <strong>A1 - 18</strong>
+
+                </div>
+
+                <div>
+
+                    <small>Fare</small>
+
+                    <strong>₹2,150</strong>
+
+                </div>
+
+            </div>
+
+            <div class="booking-buttons">
+
+                <a href="404.html" class="primary-btn">
+
+                    Approve
+
+                </a>
+
+                <a href="404.html" class="secondary-btn">
+
+                    Reject
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================
+PASSENGER MANAGEMENT
+===========================================-->
+
+<section
+    id="passenger-management"
+    class="page-section">
+
+    <div class="section-heading">
+
+        <h2>
+
+            Passenger Management
+
+        </h2>
+
+        <p>
+
+            Manage registered passengers and their travel information.
+
+        </p>
+
+    </div>
+
+    <div class="passenger-grid">
+
+        <!-- Passenger -->
+
+        <div class="passenger-card">
+
+            <img
+                src="images/clientimg1.jpg"
+                alt="Passenger">
+
+            <h3>
+
+                Rahul Sharma
+
+            </h3>
+
+            <p>
+
+                rahul@gmail.com
+
+            </p>
+
+            <div class="passenger-info">
+
+                <div>
+
+                    <small>Total Trips</small>
+
+                    <strong>52</strong>
+
+                </div>
+
+                <div>
+
+                    <small>Bookings</small>
+
+                    <strong>68</strong>
+
+                </div>
+
+                <div>
+
+                    <small>Status</small>
+
+                    <strong class="active-passenger">
+
+                        Active
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+            <div class="passenger-buttons">
+
+                <a
+                    href="404.html"
+                    class="primary-btn">
+
+                    View
+
+                </a>
+
+                <a
+                    href="404.html"
+                    class="secondary-btn">
+
+                    Edit
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Passenger -->
+
+        <div class="passenger-card">
+
+            <img
+                src="images/img13.webp"
+                alt="Passenger">
+
+            <h3>
+
+                Priya Reddy
+
+            </h3>
+
+            <p>
+
+                priya@gmail.com
+
+            </p>
+
+            <div class="passenger-info">
+
+                <div>
+
+                    <small>Total Trips</small>
+
+                    <strong>35</strong>
+
+                </div>
+
+                <div>
+
+                    <small>Bookings</small>
+
+                    <strong>42</strong>
+
+                </div>
+
+                <div>
+
+                    <small>Status</small>
+
+                    <strong class="active-passenger">
+
+                        Active
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+            <div class="passenger-buttons">
+
+                <a
+                    href="404.html"
+                    class="primary-btn">
+
+                    View
+
+                </a>
+
+                <a
+                    href="404.html"
+                    class="secondary-btn">
+
+                    Edit
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!--==========================================
+TRAIN SCHEDULE MANAGEMENT
+===========================================-->
+
+<section id="schedule-management" class="page-section">
+
+    <div class="section-heading">
+
+        <h2>
+
+            Train Schedule Management
+
+        </h2>
+
+        <p>
+
+            Manage train departure, arrival and platform schedules.
+
+        </p>
+
+    </div>
+
+    <div class="schedule-grid">
+
+        <!-- Schedule Card -->
+
+        <div class="schedule-card">
+
+            <div class="schedule-top">
+
+                <div>
+
+                    <h3>
+
+                        Vande Bharat Express
+
+                    </h3>
+
+                    <span>
+
+                        Train No : 20701
+
+                    </span>
+
+                </div>
+
+                <span class="status active">
+
+                    On Time
+
+                </span>
+
+            </div>
+
+            <div class="schedule-details">
+
+                <div>
+
+                    <small>Departure</small>
+
+                    <strong>06:00 AM</strong>
+
+                </div>
+
+                <div>
+
+                    <small>Arrival</small>
+
+                    <strong>01:45 PM</strong>
+
+                </div>
+
+                <div>
+
+                    <small>Platform</small>
+
+                    <strong>5</strong>
+
+                </div>
+
+                <div>
+
+                    <small>Route</small>
+
+                    <strong>Hyderabad → Bengaluru</strong>
+
+                </div>
+
+            </div>
+
+            <div class="schedule-buttons">
+
+                <a href="404.html" class="primary-btn">
+
+                    Update
+
+                </a>
+
+                <a href="404.html" class="secondary-btn">
+
+                    View
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Schedule Card -->
+
+        <div class="schedule-card">
+
+            <div class="schedule-top">
+
+                <div>
+
+                    <h3>
+
+                        Rajdhani Express
+
+                    </h3>
+
+                    <span>
+
+                        Train No : 12952
+
+                    </span>
+
+                </div>
+
+                <span class="status delay">
+
+                    Delayed
+
+                </span>
+
+            </div>
+
+            <div class="schedule-details">
+
+                <div>
+
+                    <small>Departure</small>
+
+                    <strong>07:15 PM</strong>
+
+                </div>
+
+                <div>
+
+                    <small>Arrival</small>
+
+                    <strong>10:10 AM</strong>
+
+                </div>
+
+                <div>
+
+                    <small>Platform</small>
+
+                    <strong>2</strong>
+
+                </div>
+
+                <div>
+
+                    <small>Route</small>
+
+                    <strong>Delhi → Mumbai</strong>
+
+                </div>
+
+            </div>
+
+            <div class="schedule-buttons">
+
+                <a href="404.html" class="primary-btn">
+
+                    Update
+
+                </a>
+
+                <a href="404.html" class="secondary-btn">
+
+                    View
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================
+REPORTS & ANALYTICS
+===========================================-->
+
+<section
+    id="reports"
+    class="page-section">
+
+    <div class="section-heading">
+
+        <h2>
+
+            Reports & Analytics
+
+        </h2>
+
+        <p>
+
+            Monitor railway performance, revenue and passenger statistics.
+
+        </p>
+
+    </div>
+
+    <div class="reports-grid">
+
+        <!-- Revenue -->
+
+        <div class="report-card">
+
+            <div class="report-icon">
+
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+
+            </div>
+
+            <h3>
+
+                Total Revenue
+
+            </h3>
+
+            <h2>
+
+                ₹8.45 Cr
+
+            </h2>
+
+            <p>
+
+                +18% Compared to Last Month
+
+            </p>
+
+        </div>
+
+        <!-- Passengers -->
+
+        <div class="report-card">
+
+            <div class="report-icon">
+
+                <i class="fa-solid fa-users"></i>
+
+            </div>
+
+            <h3>
+
+                Total Passengers
+
+            </h3>
+
+            <h2>
+
+                1,24,860
+
+            </h2>
+
+            <p>
+
+                +9% Passenger Growth
+
+            </p>
+
+        </div>
+
+        <!-- Bookings -->
+
+        <div class="report-card">
+
+            <div class="report-icon">
+
+                <i class="fa-solid fa-ticket"></i>
+
+            </div>
+
+            <h3>
+
+                Tickets Booked
+
+            </h3>
+
+            <h2>
+
+                42,580
+
+            </h2>
+
+            <p>
+
+                This Month
+
+            </p>
+
+        </div>
+
+        <!-- Trains -->
+
+        <div class="report-card">
+
+            <div class="report-icon">
+
+                <i class="fa-solid fa-train"></i>
+
+            </div>
+
+            <h3>
+
+                Active Trains
+
+            </h3>
+
+            <h2>
+
+                128
+
+            </h2>
+
+            <p>
+
+                Running Successfully
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="analytics-wrapper">
+
+        <div class="analytics-card">
+
+            <h3>
+
+                Monthly Performance
+
+            </h3>
+
+            <div class="progress-item">
+
+                <span>
+
+                    Revenue Target
+
+                </span>
+
+                <div class="progress">
+
+                    <span style="width:90%;"></span>
+
+                </div>
+
+            </div>
+
+            <div class="progress-item">
+
+                <span>
+
+                    Ticket Bookings
+
+                </span>
+
+                <div class="progress">
+
+                    <span style="width:82%;"></span>
+
+                </div>
+
+            </div>
+
+            <div class="progress-item">
+
+                <span>
+
+                    Passenger Satisfaction
+
+                </span>
+
+                <div class="progress">
+
+                    <span style="width:95%;"></span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="analytics-card">
+
+            <h3>
+
+                Performance Summary
+
+            </h3>
+
+            <ul>
+
+                <li>✔ 98% Trains Running On Time</li>
+
+                <li>✔ 94% Seat Occupancy</li>
+
+                <li>✔ 2.4M Monthly Visitors</li>
+
+                <li>✔ 99.2% Booking Success Rate</li>
+
+                <li>✔ 4.8/5 Customer Rating</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================
+        FOOTER
+===========================================-->
+
+<footer class="dashboard-footer">
+
+    <p>
+
+        © 2026 Stackly Railway Management.
+        All Rights Reserved.
+
+    </p>
+
+</footer>
+
+</main>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

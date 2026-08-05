@@ -1,0 +1,383 @@
+/*==========================================
+404 PAGE
+==========================================*/
+/*==========================================
+RESET
+==========================================*/
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    width:100%;
+
+    height:100%;
+
+}
+
+body{
+
+    width:100%;
+
+    min-height:100vh;
+
+    margin:0;
+
+    padding:0;
+
+    overflow-x:hidden;
+
+    font-family:"Poppins",sans-serif;
+
+    background:linear-gradient(
+        135deg,
+        #071c43,
+        #0c3b7a
+    );
+
+}
+
+
+
+
+.error-404{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+    background:linear-gradient(135deg,#071c43,#0c3b7a);
+
+}
+
+.error-card{
+
+    width:100%;
+
+    max-width:520px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:28px;
+
+    padding:45px;
+
+    text-align:center;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.25);
+
+}
+
+.error-icon{
+
+    width:90px;
+
+    height:90px;
+
+    margin:auto;
+
+    margin-bottom:20px;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#0ea5e9,#2563eb);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#fff;
+
+    font-size:34px;
+
+}
+
+.error-tag{
+
+    display:inline-block;
+
+    padding:10px 20px;
+
+    border-radius:30px;
+
+    background:rgba(14,165,233,.18);
+
+    color:#38bdf8;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+.error-card h1{
+
+    font-size:90px;
+
+    color:#fff;
+
+    margin:10px 0;
+
+}
+
+.error-card h2{
+
+    color:#fff;
+
+    margin-bottom:18px;
+
+}
+
+.error-card p{
+
+    color:#cbd5e1;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+
+}
+
+.error-features{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+    margin-bottom:35px;
+
+}
+
+.error-features div{
+
+    background:rgba(255,255,255,.08);
+
+    padding:18px;
+
+    border-radius:16px;
+
+}
+
+.error-features i{
+
+    color:#38bdf8;
+
+    font-size:24px;
+
+    margin-bottom:10px;
+
+}
+
+.error-features span{
+
+    display:block;
+
+    color:#fff;
+
+    font-size:14px;
+
+}
+
+.error-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.primary-btn,
+
+.secondary-btn{
+
+    flex:1;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:14px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.primary-btn{
+
+    background:linear-gradient(135deg,#2563eb,#0ea5e9);
+
+    color:#fff;
+
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.secondary-btn{
+
+    background:rgba(255,255,255,.1);
+
+    color:#fff;
+
+}
+
+.secondary-btn:hover{
+
+    background:#fff;
+
+    color:#0f172a;
+
+}
+
+@media(max-width:768px){
+
+.error-card{
+
+    padding:30px 22px;
+
+}
+
+.error-card h1{
+
+    font-size:70px;
+
+}
+
+.error-features{
+
+    grid-template-columns:1fr;
+
+}
+
+
+}
+
+/*==========================================
+BUTTONS
+==========================================*/
+
+.error-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-top:30px;
+
+}
+
+.error-buttons .primary-btn,
+.error-buttons .secondary-btn{
+
+    flex:1;
+
+    max-width:220px;
+
+    height:52px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+/*==========================================
+MOBILE
+==========================================*/
+
+@media(max-width:768px){
+
+.error-buttons{
+
+    flex-direction:row;
+
+    gap:10px;
+
+}
+
+.error-buttons .primary-btn,
+.error-buttons .secondary-btn{
+
+    max-width:none;
+
+    width:50%;
+
+    height:48px;
+
+    font-size:14px;
+ white-space: nowrap;
+}
+
+}
+
+@media(max-width:480px){
+
+.error-buttons{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+.error-buttons .primary-btn,
+.error-buttons .secondary-btn{
+
+    width:100%;
+
+    max-width:280px;
+
+}
+
+}

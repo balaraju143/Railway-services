@@ -1,0 +1,2095 @@
+/*==========================================
+  GOOGLE FONT
+==========================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+
+/*==========================================
+  CSS VARIABLES
+==========================================*/
+
+:root{
+
+    /* Theme Colors */
+    --bg:#111827;
+    --white:#F8F9FA;
+    --accent:#FF6B00;
+
+    /* Glass Effect */
+
+    --glass:rgba(255,255,255,.82);
+    --glass-border:rgba(17,24,39,.08);
+
+    /* Shadow */
+
+    --shadow:0 20px 55px rgba(17,24,39,.10);
+
+    /* Radius */
+
+    --radius:18px;
+
+    /* Transition */
+
+    --transition:.4s ease;
+
+    /* Container */
+
+    --container:1320px;
+
+}
+
+
+/*==========================================
+  RESET
+==========================================*/
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+    overflow-x:hidden;
+
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+    background:var(--bg);
+    color:var(--dark);
+    overflow-x:hidden;
+    line-height:1.7;
+    min-height:100vh;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+
+}
+
+img{
+
+    max-width:100%;
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+    color:inherit;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+button{
+
+    border:none;
+    outline:none;
+    background:none;
+    cursor:pointer;
+    font-family:inherit;
+
+}
+
+input,
+textarea,
+select{
+
+    outline:none;
+    border:none;
+    font-family:inherit;
+
+}
+
+
+/*==========================================
+  SELECTION
+==========================================*/
+
+::selection{
+
+    background:var(--accent);
+    color:#fff;
+
+}
+
+
+/*==========================================
+  SCROLLBAR
+==========================================*/
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#ECEFF1;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--accent);
+    border-radius:50px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#e25f00;
+
+}
+
+
+/*==========================================
+  COMMON CONTAINER
+==========================================*/
+
+.container{
+
+    width:min(100% - 40px,var(--container));
+    margin:auto;
+
+}
+
+
+/*==========================================
+  COMMON SECTION
+==========================================*/
+
+section{
+
+    position:relative;
+    overflow:hidden;
+    padding:100px 0;
+
+}
+
+
+/*==========================================
+  COMMON UTILITIES
+==========================================*/
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt-20{
+
+    margin-top:20px;
+
+}
+
+.mt-40{
+
+    margin-top:40px;
+
+}
+
+.mt-60{
+
+    margin-top:60px;
+
+}
+
+.mb-20{
+
+    margin-bottom:20px;
+
+}
+
+.mb-40{
+
+    margin-bottom:40px;
+
+}
+
+.mb-60{
+
+    margin-bottom:60px;
+
+}
+
+
+/*==========================================
+  OVERFLOW FIX
+==========================================*/
+
+html,
+body{
+
+    overflow-x:hidden;
+
+}
+
+img{
+
+    max-width:100%;
+
+}
+/*==========================================
+  HEADER
+==========================================*/
+
+header{
+
+    position:relative;
+    width:100%;
+    z-index:999;
+
+}
+
+
+/*==========================================
+  GLASS NAVBAR
+==========================================*/
+/*==========================================
+FIXED NAVBAR
+==========================================*/
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:9999;
+
+    background:rgba(17,24,39,.75);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    transition:.35s ease;
+
+}
+
+
+/*==========================================
+  NAVBAR CONTAINER
+==========================================*/
+
+.navbar .container{
+
+    max-width:1320px;
+    width:100%;
+
+    height:92px;
+
+    margin:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:45px;
+
+    padding:0 20px;
+
+}
+
+
+/*==========================================
+  LOGO
+==========================================*/
+
+.logo{
+
+    flex-shrink:0;
+
+    display:flex;
+    align-items:center;
+
+}
+
+.logo img{
+
+    width:260px;
+    height:260px;
+
+    object-fit:contain;
+
+    transition:.4s;
+
+}
+
+.logo:hover img{
+
+    transform:scale(1.05);
+
+}
+
+
+/*==========================================
+  DESKTOP NAVIGATION
+==========================================*/
+
+.nav-links{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:45px;
+
+}
+
+.nav-links li{
+
+    position:relative;
+
+}
+
+.nav-links li a{
+
+    color:#ffffff;
+
+}
+
+.nav-links a{
+
+    position:relative;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:var(--dark);
+
+    letter-spacing:.3px;
+
+    transition:.35s;
+
+}
+
+
+/*==========================================
+  NAV LINK HOVER
+==========================================*/
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+    bottom:-10px;
+
+    width:0;
+    height:2px;
+
+    background:var(--accent);
+
+    transform:translateX(-50%);
+
+    transition:.35s;
+
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+
+    color:var(--accent);
+
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after{
+
+    width:100%;
+
+}
+
+
+/*==========================================
+  RIGHT SIDE
+==========================================*/
+
+.nav-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    margin-left:auto;
+
+}
+
+
+/*==========================================
+  LOGIN BUTTON
+==========================================*/
+/*==========================================
+AUTH BUTTON
+==========================================*/
+
+.auth-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    height:54px;
+
+    padding:0 32px;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        135deg,
+        #ffd873,
+        #FF6B00
+    );
+
+    color:#111827;
+
+    font-size:15px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    border:1px solid rgba(255,255,255,.35);
+
+    box-shadow:
+        0 10px 30px rgba(255,107,0,.22);
+
+    transition:.4s ease;
+
+}
+
+.auth-btn i{
+
+    font-size:17px;
+
+}
+
+.auth-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:45%;
+
+    height:100%;
+
+    background:rgba(255,255,255,.35);
+
+    transform:skewX(-25deg);
+
+    transition:.8s;
+
+}
+
+.auth-btn:hover::before{
+
+    left:150%;
+
+}
+
+.auth-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 18px 40px rgba(255,107,0,.35);
+
+}
+
+
+.mobile-auth{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    height:52px;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        135deg,
+        #ffd873,
+        #FF6B00
+    );
+
+    color:#111827 !important;
+
+    font-weight:700;
+
+}
+
+@media (max-width:991px){
+
+    .auth-btn{
+
+        display:none;
+
+    }
+
+    .menu-toggle{
+
+        display:flex;
+
+    }
+
+}
+
+
+/*==========================================
+  MENU TOGGLE
+==========================================*/
+
+.menu-toggle{
+
+    width:52px;
+    height:52px;
+
+    display:none;
+
+    align-items:center;
+    justify-content:center;
+
+    flex-direction:column;
+
+    gap:6px;
+
+    border-radius:14px;
+
+    background:rgba(17,24,39,.05);
+
+    transition:.35s;
+
+}
+
+.menu-toggle:hover{
+
+    background:rgba(255,107,0,.12);
+
+}
+
+.menu-toggle span{
+
+    width:24px;
+    height:2px;
+
+    border-radius:10px;
+
+    background:var(--dark);
+
+    transition:.35s;
+
+}
+
+
+/*==========================================
+  ACTIVE MENU ICON
+==========================================*/
+
+.menu-toggle.active span:nth-child(1){
+
+    transform:
+        translateY(8px)
+        rotate(45deg);
+
+}
+
+.menu-toggle.active span:nth-child(2){
+
+    opacity:0;
+
+}
+
+.menu-toggle.active span:nth-child(3){
+
+    transform:
+        translateY(-8px)
+        rotate(-45deg);
+
+}
+/*==========================================
+  MOBILE OVERLAY
+==========================================*/
+
+.mobile-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(17,24,39,.45);
+
+    backdrop-filter:blur(4px);
+    -webkit-backdrop-filter:blur(4px);
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.4s ease;
+
+    z-index:998;
+
+}
+
+.mobile-overlay.active{
+
+    opacity:1;
+    visibility:visible;
+
+}
+
+
+/*==========================================
+  MOBILE MENU
+==========================================*/
+
+.mobile-menu{
+
+    position:fixed;
+
+    top:92px;
+
+    left:0;
+
+    width:310px;
+
+    max-width:85%;
+
+    height:calc(100vh - 92px);
+
+    background:rgba(17,24,39,.96);
+
+    border-right:1px solid rgba(17,24,39,.08);
+
+    box-shadow:25px 0 60px rgba(17,24,39,.12);
+
+    transform:translateX(-100%);
+
+    transition:.45s ease;
+
+    overflow-y:auto;
+
+    padding:30px 24px 35px;
+
+    z-index:999;
+
+}
+
+.mobile-menu.active{
+
+    transform:translateX(0);
+
+}
+
+
+/*==========================================
+  MOBILE NAVIGATION
+==========================================*/
+
+.mobile-menu ul{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.mobile-menu li{
+
+    opacity:0;
+
+    transform:translateX(-35px);
+
+    transition:.45s ease;
+
+}
+
+.mobile-menu.active li{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+.mobile-menu.active li:nth-child(1){transition-delay:.05s;}
+.mobile-menu.active li:nth-child(2){transition-delay:.10s;}
+.mobile-menu.active li:nth-child(3){transition-delay:.15s;}
+.mobile-menu.active li:nth-child(4){transition-delay:.20s;}
+.mobile-menu.active li:nth-child(5){transition-delay:.25s;}
+
+
+/*==========================================
+  MOBILE LINKS
+==========================================*/
+
+.mobile-menu a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    padding:16px 18px;
+
+    border-radius:16px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:#ffffff;
+
+    border:1px solid transparent;
+
+    transition:.35s;
+
+}
+
+.mobile-menu a:hover{
+
+    color:var(--accent);
+
+    background:rgba(255,107,0,.08);
+
+    border-color:rgba(255,107,0,.20);
+
+    transform:translateX(6px);
+
+}
+
+.mobile-menu i{
+
+    width:22px;
+
+    text-align:center;
+
+    color:var(--accent);
+
+    font-size:18px;
+
+}
+
+
+/*==========================================
+  MOBILE BUTTONS
+==========================================*/
+
+.mobile-buttons{
+
+    margin-top:35px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+
+/*==========================================
+  MOBILE LOGIN
+==========================================*/
+
+.mobile-login{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:50px;
+
+    border:2px solid var(--accent);
+
+    border-radius:50px;
+
+    color:var(--accent) !important;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.mobile-login:hover{
+
+    background:var(--accent);
+
+    color:#fff !important;
+
+}
+
+
+/*==========================================
+  MOBILE SIGNUP
+==========================================*/
+
+.mobile-signup{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:52px;
+
+    border-radius:50px;
+
+    background:var(--accent);
+
+    color:#fff !important;
+
+    font-weight:700;
+
+    box-shadow:0 12px 30px rgba(255,107,0,.25);
+
+    transition:.35s;
+
+}
+
+.mobile-signup:hover{
+
+    transform:translateY(-4px);
+
+}
+
+
+/*==========================================
+  TABLET
+==========================================*/
+
+@media(max-width:991px){
+
+    .nav-links,
+    .login-btn,
+    .signup-btn{
+
+        display:none;
+
+    }
+
+    .menu-toggle{
+
+        display:flex;
+
+    }
+
+}
+
+
+/*==========================================
+  MOBILE
+==========================================*/
+
+@media(max-width:768px){
+
+    .navbar .container{
+
+        height:78px;
+
+        padding:0 16px;
+
+    }
+    .logo img{
+
+        width:240px;
+
+        height:240px;
+      margin-left:-15px;
+    }
+
+    .mobile-menu{
+
+        top:78px;
+
+        height:calc(100vh - 78px);
+
+        width:290px;
+
+    }
+
+}
+
+
+/*==========================================
+  SMALL MOBILE
+==========================================*/
+
+@media(max-width:576px){
+
+    .container{
+
+        width:min(100% - 24px,var(--container));
+
+    }
+
+    .logo img{
+
+        width:240px;
+
+        height:240px;
+
+    }
+
+    .mobile-menu{
+
+        width:280px;
+
+        padding:25px 20px 30px;
+
+    }
+
+    .mobile-menu a{
+
+        font-size:15px;
+
+    }
+
+}
+
+
+/*==========================================
+FOOTER
+==========================================*/
+
+.footer{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:var(--bg);
+
+    color:var(--white);
+
+}
+
+
+/*==========================================
+FOOTER BACKGROUND
+==========================================*/
+
+.footer-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    background:url("../images/footer/footer-bg.webp") center center/cover no-repeat;
+
+    overflow:hidden;
+
+}
+
+.footer-bg::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        rgba(17,24,39,.78),
+
+        rgba(17,24,39,.94)
+
+    );
+
+}
+
+.footer-bg{
+
+    animation:footerZoom 18s linear infinite alternate;
+
+}
+
+@keyframes footerZoom{
+
+    from{
+
+        transform:scale(1);
+
+    }
+
+    to{
+
+        transform:scale(1.08);
+
+    }
+
+}
+
+
+/*==========================================
+FOOTER OVERLAY
+==========================================*/
+
+.footer-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        rgba(17,24,39,.25),
+
+        rgba(17,24,39,.60)
+
+    );
+
+}
+
+
+/*==========================================
+FOOTER CONTAINER
+==========================================*/
+
+.footer .container{
+
+    position:relative;
+
+    z-index:10;
+
+    max-width:1320px;
+
+    margin:auto;
+
+    padding:90px 20px 40px;
+
+}
+
+
+/*==========================================
+FOOTER TOP
+==========================================*/
+
+.footer-top{
+
+    display:grid;
+
+    grid-template-columns:
+
+        2fr
+        1fr
+        1fr
+        1.2fr;
+
+    gap:60px;
+
+    padding-bottom:60px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+
+/*==========================================
+FOOTER LOGO
+==========================================*/
+
+.footer-logo{
+
+    display:inline-flex;
+
+    align-items:center;
+    margin-bottom:-30px !important;
+    margin-top: -30px !important;
+
+   
+
+}
+
+.footer-logo img{
+
+    width:220px;
+
+    object-fit:contain;
+
+    transition:.4s ease;
+    
+
+}
+
+.footer-logo:hover img{
+
+    transform:scale(1.05);
+
+}
+
+
+/*==========================================
+ABOUT
+==========================================*/
+
+.footer-about p{
+
+    color:rgba(248,249,250,.75);
+
+    font-size:16px;
+
+    line-height:2;
+
+    margin-bottom:25px;
+
+    max-width:420px;
+
+}
+/*==========================================
+SOCIAL ICONS
+==========================================*/
+
+.footer-social{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+     margin-bottom:18px;
+
+}
+
+.footer-social a{
+
+    width:52px;
+
+    height:52px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:var(--white);
+
+    font-size:18px;
+
+    transition:.4s ease;
+
+}
+
+.footer-social a:hover{
+
+    background:var(--accent);
+
+    color:#fff;
+
+    border-color:var(--accent);
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 40px rgba(255,107,0,.30);
+
+}
+
+
+/*==========================================
+FOOTER COLUMN
+==========================================*/
+.footer-column h3{
+
+    position:relative;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+    white-space:nowrap;
+
+}
+
+.footer-column h3::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-12px;
+
+    width:70px;
+
+    height:3px;
+
+    border-radius:30px;
+
+    background:var(--accent);
+
+}
+
+
+/*==========================================
+FOOTER LINKS
+==========================================*/
+
+.footer-column ul{
+
+    margin:0;
+
+    padding:0;
+
+    list-style:none;
+    margin-top:18px;
+}
+
+.footer-column ul li{
+
+    margin-bottom:18px;
+
+}
+
+.footer-column ul li:last-child{
+
+    margin-bottom:0;
+
+}
+
+.footer-column ul li a{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:1px;
+
+    color:rgba(248,249,250,.75);
+
+    font-size:16px;
+
+    transition:.35s ease;
+
+}
+
+.footer-column ul li a::before{
+
+    content:"➜";
+
+    color:var(--accent);
+
+    font-size:13px;
+
+    opacity:0;
+
+    transform:translateX(-10px);
+
+    transition:.35s ease;
+
+}
+
+.footer-column ul li a:hover{
+
+    color:var(--accent);
+
+    transform:translateX(10px);
+
+}
+
+.footer-column ul li a:hover::before{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+
+/*==========================================
+CONTACT
+==========================================*/
+
+.footer-contact{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:5px;
+
+}
+
+.footer-contact li{
+
+    margin:0;
+
+}
+
+.footer-contact li a{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:5px;
+
+    color:rgba(248,249,250,.75);
+
+    transition:.35s ease;
+
+}
+
+.footer-contact li a:hover{
+
+    color:var(--accent);
+
+}
+
+.footer-contact i{
+
+    width:20px;
+
+    color:var(--accent);
+
+    font-size:10px;
+
+    margin-top:3px;
+
+    flex-shrink:0;
+
+}   
+
+/*==========================================
+FOOTER BOTTOM
+==========================================*/
+
+.footer-bottom{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    padding-top:35px;
+
+}
+
+.footer-bottom p{
+
+    color:rgba(248,249,250,.65);
+
+    font-size:15px;
+
+    line-height:1.7;
+
+}
+
+
+/*==========================================
+FOOTER POLICY
+==========================================*/
+
+.footer-policy{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:28px;
+
+    flex-wrap:wrap;
+
+}
+
+.footer-policy a{
+
+    position:relative;
+
+    color:rgba(248,249,250,.65);
+
+    font-size:15px;
+
+    transition:.35s ease;
+
+}
+
+.footer-policy a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-5px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--accent);
+
+    transition:.35s ease;
+
+}
+
+.footer-policy a:hover{
+
+    color:var(--accent);
+
+}
+
+.footer-policy a:hover::after{
+
+    width:100%;
+
+}
+
+
+/*==========================================
+SCROLL TO TOP
+==========================================*/
+
+.scroll-top{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    width:58px;
+
+    height:58px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:var(--accent);
+
+    color:#fff;
+
+    font-size:20px;
+
+    box-shadow:0 15px 35px rgba(255,107,0,.35);
+
+    transition:.4s ease;
+
+    z-index:999;
+
+}
+
+.scroll-top:hover{
+
+    transform:translateY(-8px) rotate(360deg);
+
+    background:#fff;
+
+    color:var(--accent);
+
+}
+
+
+/*==========================================
+FOOTER REVEAL
+==========================================*/
+
+.footer-column{
+
+    opacity:1;
+
+    transform:translateY(60px);
+
+    transition:
+
+        opacity .8s ease,
+
+        transform .8s ease;
+
+}
+
+.footer-column.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+/*==========================================
+PERFORMANCE
+==========================================*/
+
+.footer-column,
+.footer-social a,
+.scroll-top{
+
+    will-change:transform;
+
+}
+
+/*==========================================
+TABLET
+==========================================*/
+
+@media(max-width:992px){
+
+    .footer .container{
+
+        padding:80px 20px 35px;
+
+    }
+
+    .footer-top{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:45px;
+
+    }
+
+    .footer-logo img{
+
+        width:190px;
+
+    }
+
+    .footer-column h3{
+
+        font-size:24px;
+
+    }
+
+    .footer-bottom{
+
+        gap:25px;
+
+    }
+
+}
+
+
+/*==========================================
+MOBILE
+==========================================*/
+
+@media(max-width:768px){
+
+    .footer .container{
+
+        padding:70px 20px 30px;
+
+    }
+
+    .footer-top{
+
+        grid-template-columns:1fr;
+
+        gap:45px;
+
+        text-align:center;
+
+    }
+
+    .footer-column{
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .footer-column h3{
+
+        font-size:24px;
+
+    }
+
+    .footer-column h3::after{
+
+        left:50%;
+
+        transform:translateX(-50%);
+
+    }
+
+    .footer-about p{
+
+        max-width:520px;
+
+        margin:0 auto 30px;
+
+    }
+
+    .footer-social{
+
+        justify-content:center;
+
+    }
+
+    .footer-column ul{
+
+        width:100%;
+
+    }
+
+    .footer-column ul li{
+
+        text-align:center;
+
+    }
+
+    .footer-column ul li a{
+
+        justify-content:center;
+
+    }
+
+    .footer-contact li a{
+
+        justify-content:center;
+
+        text-align:center;
+
+    }
+
+    .footer-bottom{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:20px;
+
+    }
+   .footer-policy{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:nowrap;
+
+    gap:10px;
+
+    white-space:nowrap;
+
+    overflow-x:auto;
+
+}
+
+    .scroll-top{
+
+        width:52px;
+
+        height:52px;
+
+        right:20px;
+
+        bottom:20px;
+
+        font-size:18px;
+
+    }
+
+}
+
+
+/*==========================================
+SMALL MOBILE
+==========================================*/
+
+@media(max-width:480px){
+
+    .footer .container{
+
+        padding:60px 16px 25px;
+
+    }
+
+    .footer-logo img{
+
+        width:260px;
+
+    }
+
+    .footer-column h3{
+
+        font-size:22px;
+
+    }
+
+    .footer-about p{
+
+        font-size:14px;
+
+        line-height:1.9;
+
+    }
+
+    .footer-column ul li a{
+
+        font-size:15px;
+
+    }
+
+    .footer-contact li a{
+
+        font-size:14px;
+
+    }
+
+    .footer-social{
+
+        gap:12px;
+
+    }
+
+    .footer-social a{
+
+        width:46px;
+
+        height:46px;
+
+        font-size:16px;
+
+    }
+
+    .footer-policy{
+
+        gap:12px;
+
+    }
+
+    .footer-policy a{
+
+        font-size:13px;
+
+    }
+
+    .footer-bottom p{
+
+        font-size:13px;
+
+    }
+
+    .scroll-top{
+
+        width:48px;
+
+        height:48px;
+
+        right:16px;
+
+        bottom:16px;
+
+        font-size:16px;
+
+    }
+
+}
+
+
+/*==========================================
+LOADER
+==========================================*/
+
+#loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#111827;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999999;
+
+    transition:.8s ease;
+
+}
+
+#loader.hide{
+
+    opacity:0;
+
+    visibility:hidden;
+
+}
+
+.loader-track{
+
+    position:relative;
+
+    width:320px;
+
+    height:8px;
+
+    background:rgba(255,255,255,.12);
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+}
+
+.loader-progress{
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    height:100%;
+
+    width:0;
+
+    background:linear-gradient(90deg,#ff6b00,#ff9d3b);
+
+    animation:progressFill 2.8s linear forwards;
+
+}
+
+.loader-train{
+
+    position:absolute;
+
+    top:50%;
+
+    left:0;
+
+    transform:translate(-50%,-50%);
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    background:#ff6b00;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#fff;
+
+    font-size:24px;
+
+    box-shadow:0 0 30px rgba(255,107,0,.45);
+
+    animation:trainMove 2.8s linear forwards;
+
+}
+
+#loader h2{
+
+    margin-top:45px;
+
+    color:#fff;
+
+    font-size:42px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+}
+
+#loader p{
+
+    margin-top:12px;
+
+    color:rgba(255,255,255,.7);
+
+    font-size:17px;
+
+}
+
+@keyframes progressFill{
+
+    to{
+
+        width:100%;
+
+    }
+
+}
+
+@keyframes trainMove{
+
+    to{
+
+        left:100%;
+
+        transform:translate(-50%,-50%);
+
+    }
+
+}
+
+/*==========================================
+LOADER MOBILE FIX
+==========================================*/
+
+@media(max-width:768px){
+
+    #loader{
+
+        padding:0 20px;
+
+        text-align:center;
+
+    }
+
+    #loader h2{
+
+        font-size:28px;
+
+        line-height:1.3;
+
+        margin-top:35px;
+
+        white-space:nowrap;
+
+        text-align:center;
+
+    }
+
+    #loader p{
+
+        max-width:300px;
+
+        margin:12px auto 0;
+
+        font-size:15px;
+
+        line-height:1.6;
+
+        text-align:center;
+
+    }
+
+    .loader-track{
+
+        width:260px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    #loader h2{
+
+        font-size:22px;
+
+        letter-spacing:1px;
+
+    }
+
+    #loader p{
+
+        font-size:14px;
+
+        max-width:260px;
+
+    }
+
+    .loader-track{
+
+        width:220px;
+
+    }
+
+}
+
+.menu-toggle span{
+
+    background:#fff !important;
+
+}

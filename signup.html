@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Railway Signup | Stackly</title>
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet"
+        href="css/style.css">
+
+    <link rel="stylesheet"
+        href="css/auth.css">
+
+</head>
+
+<body>
+
+<section class="login-section">
+
+    <!--==============================
+    LEFT IMAGE
+    ==============================-->
+
+    <div class="login-image">
+
+        <img src="images/samrt-infrastructure.webp"
+            alt="Railway Technology">
+
+        <div class="image-overlay"></div>
+
+        <div class="image-content">
+
+            <span class="section-tag">
+
+                Smart Railway Platform
+
+            </span>
+
+            <h1>
+
+                Build Your Railway
+                Account Today
+
+            </h1>
+
+            <p>
+
+                Create your secure account and access intelligent
+                railway solutions, AI monitoring and smart
+                transportation services.
+
+            </p>
+
+            <div class="floating-card">
+
+                <div class="float-icon">
+
+                    <i class="fa-solid fa-train-subway"></i>
+
+                </div>
+
+                <div>
+
+                    <h4>
+
+                        Smart Railway Network
+
+                    </h4>
+
+                    <p>
+
+                        AI Monitoring • Live Analytics
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--==============================
+    SIGNUP CARD
+    ==============================-->
+
+    <div class="login-wrapper">
+
+        <div class="login-card">
+
+            <a href="index.html"
+
+                class="back-home">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back To Home
+
+            </a>
+
+            <div class="login-tabs">
+
+                <button
+                    type="button"
+                    class="tab-btn active">
+
+                    Client Register
+
+                </button>
+
+                <button
+                    type="button"
+                    class="tab-btn">
+
+                    Admin Register
+
+                </button>
+
+            </div>
+
+            <span class="section-tag">
+
+                Secure Registration
+
+            </span>
+
+            <h2>
+
+                Create Account
+
+            </h2>
+
+            <p>
+
+                Register to access the railway dashboard.
+
+            </p>
+
+            <div class="role-selection">
+
+                <div class="role-card active"
+
+                    data-role="customer">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <span>
+
+                        Customer
+
+                    </span>
+
+                </div>
+
+                <div class="role-card"
+
+                    data-role="admin">
+
+                    <i class="fa-solid fa-user-shield"></i>
+
+                    <span>
+
+                        Admin
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <form id="signupForm">
+                                <!--==================================
+                FULL NAME
+                ==================================-->
+
+                <div class="input-group">
+
+                    <label>
+
+                        Full Name
+
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your full name"
+                            autocomplete="off">
+
+                    </div>
+
+                    <small></small>
+
+                </div>
+
+                <!--==================================
+                EMAIL
+                ==================================-->
+
+                <div class="input-group">
+
+                    <label>
+
+                        Email Address
+
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email"
+                            autocomplete="off">
+
+                    </div>
+
+                    <small></small>
+
+                </div>
+
+                <!--==================================
+                PHONE
+                ==================================-->
+
+                <div class="input-group">
+
+                    <label>
+
+                        Phone Number
+
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="Enter your phone number"
+                            maxlength="10">
+
+                    </div>
+
+                    <small></small>
+
+                </div>
+
+                <!--==================================
+                PASSWORD
+                ==================================-->
+
+                <div class="input-group">
+
+                    <label>
+
+                        Password
+
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Create password">
+
+                        <span class="toggle-password">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </span>
+
+                    </div>
+
+                    <small></small>
+
+                </div>
+
+                <!--==================================
+                CONFIRM PASSWORD
+                ==================================-->
+
+                <div class="input-group">
+
+                    <label>
+
+                        Confirm Password
+
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            placeholder="Confirm password">
+
+                        <span class="toggle-confirm">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </span>
+
+                    </div>
+
+                    <small></small>
+
+                </div>
+
+                <!--==================================
+                TERMS
+                ==================================-->
+
+                <div class="form-options">
+
+                    <label class="remember">
+
+                        <input
+                            type="checkbox"
+                            id="agree">
+
+                        I agree to the Terms &
+                        Privacy Policy
+
+                    </label>
+
+                </div>
+
+                <small
+                    class="checkbox-error"></small>
+
+                <!--==================================
+                BUTTON
+                ==================================-->
+
+                <button
+                    type="submit"
+                    class="primary-btn">
+
+                    Create Account
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </form>
+
+            <!--==================================
+            DIVIDER
+            ==================================-->
+
+            <div class="login-divider">
+
+                <span>
+
+                    Secure Railway Registration
+
+                </span>
+
+            </div>
+
+            <!--==================================
+            LOGIN LINK
+            ==================================-->
+
+            <p class="signup-text">
+
+                Already have an account?
+
+                <a href="login.html">
+
+                    Login Here
+
+                </a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="js/script.js"></script>
+
+<script src="js/signup.js"></script>
+
+</body>
+
+</html>
