@@ -4433,7 +4433,7 @@ MOBILE
 
     .railway-map{
 
-        height:470px;
+        height:600px;
 
     }
 
@@ -4530,7 +4530,7 @@ SMALL MOBILE
 
     .railway-map{
 
-        height:400px;
+        height:600px;
 
     }
 
@@ -4565,9 +4565,13 @@ SMALL MOBILE
         left:calc(50% - 60px);
 
     }
+    .hyderabad{
+
+    bottom:0px !important;
 
 }
 
+}
 
 /*==========================================
 SCROLL REVEAL
