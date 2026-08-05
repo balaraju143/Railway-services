@@ -633,12 +633,6 @@ window.location.href="login.html";
 
 /*=====================================
         SEARCH ICON
-======================================*/
-/*=====================================
-        SEARCH ICON
-=====================================*/
-/*=====================================
-        SEARCH ICON
 =====================================*/
 
 document.querySelectorAll(".search-box").forEach(box=>{
@@ -1036,3 +1030,38 @@ menuLinks.forEach(link=>{
 });
 
 
+
+
+/*==========================================
+SIDEBAR SMOOTH SCROLL FIX
+==========================================*/
+
+document.querySelectorAll(".sidebar-menu a").forEach(link=>{
+
+    link.addEventListener("click",function(e){
+
+        const targetId=this.getAttribute("href");
+
+        if(targetId.startsWith("#")){
+
+            e.preventDefault();
+
+            const target=document.querySelector(targetId);
+
+            if(target){
+
+                window.scrollTo({
+
+                    top:target.offsetTop-20,
+
+                    behavior:"smooth"
+
+                });
+
+            }
+
+        }
+
+    });
+
+});
