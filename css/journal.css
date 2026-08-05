@@ -6,7 +6,7 @@ JOURNAL HERO
 
     position:relative;
 
-    height:100vh;
+    height:120vh;
 
     overflow:hidden;
 
@@ -134,6 +134,7 @@ CONTENT
     text-align:center;
 
     color:#fff;
+    margin-top:-60px;
 
 }
 
@@ -430,7 +431,7 @@ MOBILE
 
     .journal-hero{
 
-        height:90vh;
+        height:100vh;
 
     }
 
@@ -488,7 +489,7 @@ SMALL MOBILE
 
     .journal-hero{
 
-        height:85vh;
+        height:95vh;
 
     }
 
@@ -2860,5 +2861,40 @@ SMALL MOBILE
         font-size:20px;
 
     }
+
+}
+
+
+/*==========================================
+RESEARCH TIMELINE MOBILE FIX
+==========================================*/
+
+@media (max-width:768px){
+
+.research-item{
+
+    padding-left:60px !important;
+
+}
+
+.research-item .research-icon{
+
+    left:-20px !important;
+
+    right:auto !important;
+
+    top:35px !important;
+
+    transform:none !important;
+
+}
+
+.research-item.right .research-icon{
+
+    left:-20px !important;
+
+    right:auto !important;
+
+}
 
 }
