@@ -1275,3 +1275,62 @@ ANIMATIONS
     font-weight:500;
 
 }
+
+
+/*==========================================
+CONFIRM PASSWORD EYE FIX
+==========================================*/
+
+.input-box{
+
+    position:relative !important;
+
+}
+
+.toggle-confirm{
+
+    position:absolute !important;
+
+    right:18px !important;
+
+    top:50% !important;
+
+    transform:translateY(-50%) !important;
+
+    display:flex !important;
+
+    align-items:center !important;
+
+    justify-content:center !important;
+
+    width:24px !important;
+
+    height:24px !important;
+
+    cursor:pointer !important;
+
+    z-index:100 !important;
+
+}
+
+.toggle-confirm i{
+
+    font-size:18px !important;
+
+    color:var(--accent) !important;
+
+    display:block !important;
+
+    visibility:visible !important;
+
+    opacity:1 !important;
+
+    line-height:1 !important;
+
+}
+
+.input-box input{
+
+    padding-right:55px !important;
+
+}

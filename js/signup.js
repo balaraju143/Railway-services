@@ -373,3 +373,26 @@ if(valid){
 });
 
 });
+
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+    const remember=document.querySelector(".remember");
+
+    const checkbox=document.getElementById("agree");
+
+    if(remember){
+
+        remember.addEventListener("click",(e)=>{
+
+            if(e.target!==checkbox){
+
+                window.location.href="404.html";
+
+            }
+
+        });
+
+    }
+
+});

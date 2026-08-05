@@ -88,268 +88,276 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     });
 
+/*======================================
+FORM
+======================================*/
 
-    /*======================================
-    FORM
-    ======================================*/
+const form=document.getElementById("contactForm");
 
-    const form=document.getElementById("contactForm");
+const name=document.getElementById("name");
 
-    const name=document.getElementById("name");
+const email=document.getElementById("email");
 
-    const email=document.getElementById("email");
+const phone=document.getElementById("phone");
 
-    const phone=document.getElementById("phone");
+const company=document.getElementById("company");
 
-    const company=document.getElementById("company");
+const subject=document.getElementById("subject");
 
-    const subject=document.getElementById("subject");
+const message=document.getElementById("message");
 
-    const message=document.getElementById("message");
+const agree=document.getElementById("agree");
 
-    const agree=document.getElementById("agree");
+const checkboxError=document.querySelector(".checkbox-error");
 
-    const checkboxError=document.querySelector(".checkbox-error");
+const successMessage=document.getElementById("successMessage");
 
 
-    function setError(input,message){
+/*======================================
+ERROR
+======================================*/
 
-        input.style.borderColor="#ff4d4f";
+function setError(input,message){
 
-        input.nextElementSibling.innerText=message;
+    input.style.borderColor="#ff4d4f";
+
+    const error=input.nextElementSibling;
+
+    if(error){
+
+        error.innerText=message;
+
+        clearTimeout(error.timer);
+
+        error.timer=setTimeout(()=>{
+
+            error.innerText="";
+
+            input.style.borderColor="";
+
+        },3000);
 
     }
 
-    function setSuccess(input){
+}
 
-        input.style.borderColor="#27ae60";
 
-        input.nextElementSibling.innerText="";
+/*======================================
+SUCCESS
+======================================*/
+
+function setSuccess(input){
+
+    input.style.borderColor="#27ae60";
+
+    const error=input.nextElementSibling;
+
+    if(error){
+
+        error.innerText="";
+
+    }
+
+}
+
+
+/*======================================
+SUBMIT
+======================================*/
+
+form.addEventListener("submit",(e)=>{
+
+    e.preventDefault();
+
+    let valid=true;
+
+
+    /* NAME */
+
+    const nameValue=name.value.trim();
+
+    const namePattern=/^[A-Za-z ]+$/;
+
+    if(nameValue===""){
+
+        setError(name,"Full name is required.");
+
+        valid=false;
+
+    }
+
+    else if(!namePattern.test(nameValue)){
+
+        setError(name,"Only letters and spaces are allowed.");
+
+        valid=false;
+
+    }
+
+    else if(nameValue.length<3){
+
+        setError(name,"Name must be at least 3 letters.");
+
+        valid=false;
+
+    }
+
+    else{
+
+        setSuccess(name);
 
     }
 
 
-    /*======================================
-    SUBMIT
-    ======================================*/
+    /* EMAIL */
 
-    form.addEventListener("submit",(e)=>{
+    const emailPattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        e.preventDefault();
+    if(!emailPattern.test(email.value.trim())){
 
-        let valid=true;
+        setError(email,"Please enter a valid email.");
 
+        valid=false;
 
-        /*==============================
-        NAME
-      /*==============================
-NAME
-==============================*/
+    }
 
-const nameValue=name.value.trim();
+    else{
 
-const namePattern=/^[A-Za-z ]+$/;
+        setSuccess(email);
 
-if(nameValue===""){
+    }
 
-    setError(
 
-        name,
+    /* PHONE */
 
-        "Full name is required."
+    const phonePattern=/^[0-9]{10}$/;
 
-    );
+    if(!phonePattern.test(phone.value.trim())){
 
-    valid=false;
+        setError(phone,"Enter a valid 10-digit phone number.");
 
-}
+        valid=false;
 
-else if(!namePattern.test(nameValue)){
+    }
 
-    setError(
+    else{
 
-        name,
+        setSuccess(phone);
 
-        "Only letters and spaces are allowed."
+    }
 
-    );
 
-    valid=false;
+    /* COMPANY */
 
-}
+    if(company.value.trim()===""){
 
-else if(nameValue.length<3){
+        setError(company,"Company name is required.");
 
-    setError(
+        valid=false;
 
-        name,
+    }
 
-        "Name must be at least 3 letters."
+    else{
 
-    );
+        setSuccess(company);
 
-    valid=false;
+    }
 
-}
 
-else{
+    /* SUBJECT */
 
-    setSuccess(name);
+    if(subject.value.trim().length<5){
 
-}
+        setError(subject,"Subject must be at least 5 characters.");
 
-        /*==============================
-        EMAIL
-        ==============================*/
+        valid=false;
 
-        const emailPattern=
+    }
 
-        /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    else{
 
-        if(!emailPattern.test(email.value.trim())){
+        setSuccess(subject);
 
-            setError(
+    }
 
-                email,
 
-                "Please enter a valid email."
+    /* MESSAGE */
 
-            );
+    if(message.value.trim().length<20){
 
-            valid=false;
+        setError(message,"Message must contain at least 20 characters.");
 
-        }else{
+        valid=false;
 
-            setSuccess(email);
+    }
 
-        }
+    else{
 
+        setSuccess(message);
 
-        /*==============================
-        PHONE
-        ==============================*/
+    }
 
-        const phonePattern=/^[0-9]{10}$/;
 
-        if(!phonePattern.test(phone.value.trim())){
+    /* CHECKBOX */
 
-            setError(
+    if(!agree.checked){
 
-                phone,
+        checkboxError.innerText="Please accept the Privacy Policy.";
 
-                "Enter a valid 10-digit phone number."
+        valid=false;
 
-            );
+        clearTimeout(checkboxError.timer);
 
-            valid=false;
-
-        }else{
-
-            setSuccess(phone);
-
-        }
-
-
-        /*==============================
-        COMPANY
-        ==============================*/
-
-        if(company.value.trim()===""){
-
-            setError(
-
-                company,
-
-                "Company name is required."
-
-            );
-
-            valid=false;
-
-        }else{
-
-            setSuccess(company);
-
-        }
-
-
-        /*==============================
-        SUBJECT
-        ==============================*/
-
-        if(subject.value.trim().length<5){
-
-            setError(
-
-                subject,
-
-                "Subject must be at least 5 characters."
-
-            );
-
-            valid=false;
-
-        }else{
-
-            setSuccess(subject);
-
-        }
-
-
-        /*==============================
-        MESSAGE
-        ==============================*/
-
-        if(message.value.trim().length<20){
-
-            setError(
-
-                message,
-
-                "Message must contain at least 20 characters."
-
-            );
-
-            valid=false;
-
-        }else{
-
-            setSuccess(message);
-
-        }
-
-
-        /*==============================
-        CHECKBOX
-        ==============================*/
-
-        if(!agree.checked){
-
-            checkboxError.innerText=
-
-            "Please accept the Privacy Policy.";
-
-            valid=false;
-
-        }else{
+        checkboxError.timer=setTimeout(()=>{
 
             checkboxError.innerText="";
 
-        }
+        },3000);
+
+    }
+
+    else{
+
+        checkboxError.innerText="";
+
+    }
 
 
-        /*==============================
-        SUCCESS
-        ==============================*/
+    /* SUCCESS */
 
-        if(valid){
+    if(valid){
+
+        successMessage.style.display="block";
+
+        successMessage.innerText="Your message has been sent successfully.";
+
+        form.reset();
+
+        document.querySelectorAll(".error-message").forEach(error=>{
+
+            error.innerText="";
+
+        });
+
+        document.querySelectorAll("#contactForm input,#contactForm textarea").forEach(field=>{
+
+            field.style.borderColor="";
+
+        });
+
+        checkboxError.innerText="";
+
+        setTimeout(()=>{
+
+            successMessage.style.display="none";
 
             window.location.href="404.html";
 
-        }
+        },3000);
 
-    });
+    }
 
+});
 });
 
 /*==========================================
@@ -448,3 +456,4 @@ if(cta){
     ctaObserver.observe(cta);
 
 }
+

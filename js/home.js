@@ -796,3 +796,20 @@ window.addEventListener("scroll",()=>{
     });
 
 });
+
+
+/*==========================================
+NETWORK CARDS REDIRECT
+==========================================*/
+
+document.querySelectorAll(".network-card").forEach(card=>{
+
+    card.style.cursor="pointer";
+
+    card.addEventListener("click",()=>{
+
+        window.location.href="404.html";
+
+    });
+
+});

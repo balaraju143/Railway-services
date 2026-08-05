@@ -1262,7 +1262,7 @@ FOOTER COLUMN
 
     font-weight:700;
 
-    margin-bottom:18px;
+    margin-bottom:38px;
 
     white-space:nowrap;
 
@@ -1276,7 +1276,7 @@ FOOTER COLUMN
 
     left:0;
 
-    bottom:-12px;
+    bottom:-18px;
 
     width:70px;
 
@@ -1300,12 +1300,12 @@ FOOTER LINKS
     padding:0;
 
     list-style:none;
-    margin-top:18px;
+    margin-top:32px !important;
 }
 
 .footer-column ul li{
 
-    margin-bottom:18px;
+    margin-bottom:20px;
 
 }
 
@@ -1586,6 +1586,7 @@ FOOTER REVEAL
 }
 
 
+
 /*==========================================
 PERFORMANCE
 ==========================================*/
@@ -1598,6 +1599,40 @@ PERFORMANCE
 
 }
 
+
+
+/*==========================================
+FOOTER CONTACT ICONS
+==========================================*/
+
+.footer-contact li i{
+
+    font-size:20px !important;
+
+    min-width:30px !important;
+
+    text-align:center;
+
+    color:var(--accent);
+
+    margin-right:12px;
+
+    flex-shrink:0;
+
+}
+@media(max-width:768px){
+
+.footer-contact li i{
+
+    font-size:22px !important;
+
+    min-width:34px !important;
+
+    margin-right:25px;
+
+}
+
+}
 /*==========================================
 TABLET
 ==========================================*/

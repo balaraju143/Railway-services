@@ -634,19 +634,44 @@ window.location.href="login.html";
 /*=====================================
         SEARCH ICON
 ======================================*/
+/*=====================================
+        SEARCH ICON
+=====================================*/
+/*=====================================
+        SEARCH ICON
+=====================================*/
 
-const searchIcon=document.querySelector(".search-box i");
+document.querySelectorAll(".search-box").forEach(box=>{
 
-if(searchIcon){
+    const input=box.querySelector("input");
 
-searchIcon.addEventListener("click",()=>{
+    const icon=box.querySelector("i");
 
-window.location.href="404.html";
+    if(input && icon){
+
+        icon.addEventListener("click",()=>{
+
+            if(input.value.trim()!==""){
+
+                input.value="";
+
+                input.blur();
+
+                window.location.href="404.html";
+
+            }
+
+            else{
+
+                input.focus();
+
+            }
+
+        });
+
+    }
 
 });
-
-}
-
 /*=====================================
         ESC KEY CLOSE SIDEBAR
 ======================================*/
@@ -1009,3 +1034,5 @@ menuLinks.forEach(link=>{
 });
 
 });
+
+
